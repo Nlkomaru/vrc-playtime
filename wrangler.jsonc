@@ -1,0 +1,19 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "vrc-playtime",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-08-16",
+	"observability": {
+		"enabled": true
+	},
+	"triggers": {
+		"crons": [
+			"0 9 * * *",
+			"0 18 * * *"
+		]
+	}
+}

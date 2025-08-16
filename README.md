@@ -108,4 +108,3 @@ npm run deploy
 ## ライセンス
 
 MIT License
-# vrc-playtime
