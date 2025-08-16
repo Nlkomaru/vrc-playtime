@@ -41,11 +41,9 @@ jobs:
       - name: Install
         run: pnpm install
 
-      - name: Build pages
-        run: pnpm run pages:build
         
-      - name: Deploy pages
-        id: deploy-pages
+      - name: Deploy worker
+        id: deploy-worker
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_KEY }}

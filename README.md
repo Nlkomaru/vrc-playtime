@@ -105,6 +105,22 @@ npm run deploy
    - SteamライブラリにVRChatが含まれているか確認
    - アプリID（438100）が正しいか確認
 
+### デプロイ
+
+```bash
+pnpm run deploy
+```
+
+or 
+
+Using GitHub Actions:
+
+
+```bash
+gh secret set -f .env
+```
+
+
 ## ライセンス
 
 MIT License
