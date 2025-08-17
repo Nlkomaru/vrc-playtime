@@ -12,6 +12,10 @@ permissions:
 
 jobs:
   deploy:
+    env:
+      STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+      STEAM_USER_ID: ${{ secrets.STEAM_USER_ID }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -48,6 +52,10 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          secrets: |
+            STEAM_API_KEY
+            STEAM_USER_ID
+            DISCORD_WEBHOOK_URL 
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
           STEAM_USER_ID: ${{ secrets.STEAM_USER_ID }}
